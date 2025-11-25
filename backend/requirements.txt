@@ -4,16 +4,55 @@ pydantic==2.5.0
 pydantic-settings==2.1.0
 python-dotenv==1.0.0
 requests==2.31.0
-pandas==2.1.3
-numpy==1.26.2
-yfinance==0.2.32
+pandas==2.0.3
+numpy==1.24.3
+yfinance==0.2.28
 python-multipart==0.0.6
 httpx==0.25.2
-redis==5.0.1
-psycopg2-binary==2.9.9
-sqlalchemy==2.0.23
-alembic==1.13.0
-apscheduler==3.10.4
-beautifulsoup4==4.12.2
-praw==7.7.1
-tweepy==4.14.0
+```
+
+**I removed these (not needed for MVP):**
+- redis (not using cache yet)
+- psycopg2-binary (not using database yet)
+- sqlalchemy (not using database yet)
+- alembic (not using database yet)
+- apscheduler (not using scheduler yet)
+- beautifulsoup4 (not scraping yet)
+- praw (not using Reddit yet)
+- tweepy (not using Twitter yet)
+
+---
+
+## 🔧 HOW TO FIX:
+
+### **Option 1: Update in GitHub** (RECOMMENDED)
+
+1. Go to your GitHub repo
+2. Navigate to: `backend/requirements.txt`
+3. Click the **pencil icon** (edit)
+4. Replace ALL content with the text above
+5. Click **"Commit changes"**
+6. Go back to Render and click **"Manual Deploy"** → **"Clear build cache & deploy"**
+
+### **Option 2: Delete and Redeploy**
+
+1. Delete this service on Render
+2. Fix `requirements.txt` locally
+3. Push to GitHub again
+4. Create new Web Service on Render
+
+---
+
+## 📝 UPDATED requirements.txt (COPY THIS):
+```
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+python-dotenv==1.0.0
+requests==2.31.0
+pandas==2.0.3
+numpy==1.24.3
+yfinance==0.2.28
+python-multipart==0.0.6
+httpx==0.25.2
